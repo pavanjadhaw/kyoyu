@@ -27,4 +27,10 @@ kyoyu cute-cat-videos-4GB.torrent
 
 &nbsp;
 
+#### links and references
+
+unofficial bittorrent specification [link](https://wiki.theory.org/index.php/BitTorrentSpecification)
+
+&nbsp;
+
 #### [MIT](https://github.com/pavanjadhaw/kyoyu/blob/master/license) license
