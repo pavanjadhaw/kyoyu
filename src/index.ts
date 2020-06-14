@@ -1,4 +1,23 @@
-if (!Deno.args.length) {
-	console.log('\nProvide path to at least one torrent file.');
-	console.log('See, kyoyu --help');
+async function main() {
+	const {
+		args: [filename]
+	} = Deno;
+
+	if (filename) {
+		const file = await Deno.open(filename);
+		await Deno.copy(file, Deno.stdout);
+		file.close();
+	}
+
+	if (!filename) {
+		console.log(`
+	You need to provide path to atleast one torrent file.
+	See, kyoyu --help for more`);
+
+		Deno.exit(1);
+	}
+}
+
+if (import.meta.main) {
+	main();
 }
